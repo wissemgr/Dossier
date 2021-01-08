@@ -1,0 +1,89 @@
+void MoveToken (CMat & Mat, const char & Move, CPosition & Pos)
+{
+    char car = Mat [Pos.first][Pos.second];
+    Mat [Pos.first][Pos.second] = KEmpty;
+    switch (Move)
+    {
+    case 'A':
+        while (Pos.first == 0) {
+	    cout << "déplacement non valide, veuillez recommancer" << endl;
+            cin >> Move;
+        }
+
+        while (Pos.second == 0) {
+	    cout << "déplacement non valide, veuillez recommancer" << endl;
+            cin >> Move;
+        } 
+
+        break;
+    case 'Z':
+        if (Pos.first == 0) {
+            Pos.first = Mat.size()-1;
+        }else {
+            --Pos.first;
+        }
+
+        break;
+    case 'E':
+        while (Pos.first == 0) {
+            cout << "déplacement non valide, veuillez recommancer" << endl;
+            cin >> Move;
+        } 
+
+        if (Pos.second == Mat[Pos.first].size()-1) {
+            cout << "déplacement non valide, veuillez recommancer" << endl;
+            cin >> Move;
+        } 
+
+        break;
+    case 'Q':
+        if (Pos.second == 0) {
+            Pos.second = Mat[Pos.first].size()-1;
+        } else {
+            --Pos.second;
+        }
+
+        break;
+    case 'D':
+        if (Pos.second == Mat[Pos.first].size()-1) {
+            Pos.second = 0;
+        } else {
+            ++Pos.second;
+        }
+        break;
+    case 'W':
+
+        while (Pos.first == Mat.size()-1) {
+            cout << "déplacement non valide, veuillez recommancer" << endl;
+            cin >> Move;
+        } 
+
+        while (Pos.second == 0) {
+            cout << "déplacement non valide, veuillez recommancer" << endl;
+            cin >> Move;
+        } 
+
+        break;
+    case 'X':
+        if (Pos.first == Mat.size()-1) {
+            Pos.first = 0;
+        }else {
+            ++Pos.first;
+        }
+        break;
+    case 'C':
+
+        while (Pos.first == Mat.size()-1) {
+            cout << "déplacement non valide, veuillez recommancer" << endl;
+            cin >> Move;
+        } 
+
+        while (Pos.second == Mat[Pos.first].size()-1) {
+            cout << "déplacement non valide, veuillez recommancer" << endl;
+            cin >> Move;
+        } 
+
+        break;
+    }
+    Mat [Pos.first][Pos.second] = car;
+} //MoveToken ()
