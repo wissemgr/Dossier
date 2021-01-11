@@ -1,0 +1,22 @@
+AfficheFich;
+int NbTours;
+NbTours = PartyNum; 
+int m;
+int n;
+m = 10;
+n = 1;
+int classement [m] [n];
+string Pseudo [m] [n]
+for ( unsigned i = m-1; i = 0; i--)
+{
+    while (NbTours < classement [i] [n-1])
+        {
+            continue;
+        }
+        if (NbTours > classement [i] [n-1])
+        {
+            classement [i] [n-1] = nbTours;
+            cout << "Saisissez votre pseudo";
+            cin >> Pseudo [i] [n-1];
+        }
+}
