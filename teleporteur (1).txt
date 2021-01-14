@@ -1,0 +1,79 @@
+
+
+fonction téléporteur aléatoire
+
+
+void Teleporteur (CMat & Mat, CPosition & PosPlayer1, CPosition & PosPlayer2)
+{
+    Mat[6][3] = '*';
+    Mat[3][8] = '*';
+
+    if (Mat [PosPlayer1.first][PosPlayer1.second] == Mat[6][3])
+    {
+	
+    Mat [PosPlayer1.first][PosPlayer1.second] = Mat[3][8];
+    Mat[6][3] = '*';
+    }
+ 
+
+    if (Mat [PosPlayer1.first][PosPlayer1.second] == Mat[3][8])
+    {
+	
+    Mat [PosPlayer1.first][PosPlayer1.second] = Mat[6][3];
+    Mat[3][8] = '*';
+    }
+
+    if (Mat [PosPlayer2.first][PosPlayer2.second] == Mat[6][3])
+    {
+	
+    Mat [PosPlayer2.first][PosPlayer2.second] = Mat[3][8];
+    Mat[6][3] = '*';
+    }
+
+
+    if (Mat [PosPlayer2.first][PosPlayer2.second] == Mat[3][8])
+    { 
+	
+    Mat [PosPlayer2.first][PosPlayer2.second] = Mat[6][3];
+    Mat[3][8] = '*';
+    }
+}
+
+
+
+
+void Teleporteur (CMat & Mat, CPosition & PosPlayer1, CPosition & PosPlayer2, car & TokenP1, car & TokenP2)
+{
+    Mat[6][3] = '*';
+    Mat[3][8] = '*';
+
+    if (Mat [PosPlayer1.first][PosPlayer1.second] == Mat[6][3])
+    {
+	
+    Mat[3][8] = TokenP1;
+    Mat[6][3] = '*';
+    }
+ 
+
+    if (Mat [PosPlayer1.first][PosPlayer1.second] == Mat[3][8])
+    {
+	
+    Mat[6][3] = TokenP1;
+    Mat[3][8] = '*';
+    }
+
+    if (Mat [PosPlayer2.first][PosPlayer2.second] == Mat[6][3])
+    {
+	
+    Mat[3][8] = TokeenP2;
+    Mat[6][3] = '*';
+    }
+
+
+    if (Mat [PosPlayer2.first][PosPlayer2.second] == Mat[3][8])
+    { 
+	
+    Mat[6][3] = TokenP2;
+    Mat[3][8] = '*';
+    }
+}
