@@ -1,0 +1,34 @@
+void Classement(int & PartyNum, const string & nomfichier){
+    ofstream ofs (nomfichier);
+    if (ofs.is_open() == true)
+    {
+    int NbTours;
+    string Pseudo;
+    unsigned m;
+    unsigned n;
+    m = 11;
+    n = 2;
+    vector <vector<pair<string, int>>> classement;
+     classement[m][n];
+     classement[0][0] = Pseudo;
+     classement[0][1] = NbTours;
+     for (unsigned i = m - 1; (i = 1); --i)
+     {
+         while (PartyNum < classement[i][n - 1])
+         {
+             break;
+         }
+         if (PartyNum > classement[i][n - 1])
+         {
+             classement[i + 1][n - 1] = PartyNum;
+             cout << "Saisissez votre pseudo";
+             ofs << classement[i + 1][n - 2];
+         }
+     }
+     }
+     else
+     {
+     cout << "Erreur" << endl;
+     return;
+     }
+}
